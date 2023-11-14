@@ -1,7 +1,7 @@
 # Dictionary Website Proposal
 
 ## Introduction
-This proposal outlines the development of a dictionary website that leverages the Words API accessible through Rapid API. The website will provide users with a simple and intuitive interface to search for word definitions, synonyms, antonyms, and related information.
+This proposal outlines the development of a dictionary website that leverages the [Words API](https://www.wordsapi.com/) accessible through [Rapid API](https://rapidapi.com/). The website will provide users with a simple and intuitive interface to search for word definitions, synonyms, antonyms, and related information.
 
 ## User Stories
 As a user of the dictionary website, I want to:

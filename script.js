@@ -20,19 +20,8 @@ form.addEventListener("submit", (event) => {
 });
 
 
-
-//event listener for category selection
-// creating a variable that stores all elements with the class "dropdown-item"
-const dropDownItems = document.querySelectorAll(".dropdown-item");
-// iterate over each drop down item 
-dropDownItems.forEach(item => {
-    //add a click event listener to each dropdown item 
-    item.addEventListener("click", function(event) {
-        // prevent default behavior of the click event 
-        event.preventDefault();
-        // hry value of the name attribute of clicked item
-        const selectedCategory = event.target.getAttribute("name");
-        // log the selected category to the console 
-        console.log(`You've selected the ${selectedCategory} category!`); 
-    }) 
-})
+const dropDownCategory =document.querySelector(".dropdown-items");
+dropDownCategory.addEventListener("change", function(event) {
+    const selectedCategory = event.target.value;
+    console.log(`You've selected the ${selectedCategory} category!`); 
+}); 

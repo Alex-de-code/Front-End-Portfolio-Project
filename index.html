@@ -44,32 +44,15 @@
         <div class="col-lg-6 mx-auto">
           <p class="lead mb-4"> This is a tool designed to simplify the word search process with a seamless UI. Created using the <a href="https://www.wordsapi.com/">Words API</a>, What's the Word? gives users the ability to search word definitions, synonyms, antonyms, and provides example sentences. Enjoy the search!</p> 
           <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <!-- <form class="w-100 me-3" role="search">
-                <div class="d-flex flex-row">
-                    <input type="search" class="search-bar form-control mr-2" placeholder="Search..." aria-label="Search"  required>
-                    <div class="dropdown is-invalid" required>
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
-                            Category
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="categoryDropdown">
-                            <a class="dropdown-item" href="#" name="Definitions">Definitions</a>
-                            <a class="dropdown-item" href="#" name="Synonyms">Synonyms</a>
-                            <a class="dropdown-item" href="#" name="Antonyms">Antonyms</a>
-                        </div class="invalid-feedback">Please choose a category</div>  
-                    </div> 
-                </div>
-                <button class="btn btn-outline-success w-100 mt-2" type="submit">Search</button> 
-            </form> -->
             <form class="w-100 me-3" role="search">
                 <div class="d-flex flex-row">
-                    <input type="search" class="search-bar form-control mr-2" placeholder="Search..." aria-label="Search" required>
-                    <select class="form-control dropdown-items" required>
+                    <input type="search" class="search-bar form-control mr-2 col-8" placeholder="Search..." aria-label="Search" required>
+                    <select class="form-control dropdown-items text-primary mr-auto" required>
                         <option value="" selected disabled hidden>Category</option>
                         <option class="dropdown-item" value="Definitions">Definitions</option>
                         <option class="dropdown-item" value="Synonyms">Synonyms</option>
                         <option class="dropdown-item" value="Antonyms">Antonyms</option>
                     </select>
-                    <div class="invalid-feedback">Please choose a category.</div>
                 </div>
                 <button class="btn btn-outline-success w-100 mt-2" type="submit">Search</button>
             </form>

@@ -7,19 +7,21 @@ wordOfTheDay.addEventListener("click", () => {
     console.log("You have just clicked the word of the day button!"); 
 });
 
-//event listener for the search bar 
-const searchBar = document.querySelector(".search-bar");
-console.log(searchBar.value);  
-
 //event listener for search button 
-const submitButton = document.querySelector("[type=submit]");
-submitButton.addEventListener("click", (event) => {
+// const submitButton = document.querySelector("[type=submit]");
+// submitButton.addEventListener("submit", (event) => {
+const form = document.querySelector("form");
+form.addEventListener("submit", (event) => {
     //this is to prevent page from refreshing while testing search button
     event.preventDefault();
+    const searchWord = event.target.querySelector(".search-bar").value;
     console.log("You have just clicked the search button!");
+    console.log(`You searched the word ${searchWord}`);
 });
 
 
+
+//event listener for category selection
 // creating a variable that stores all elements with the class "dropdown-item"
 const dropDownItems = document.querySelectorAll(".dropdown-item");
 // iterate over each drop down item 
@@ -32,14 +34,5 @@ dropDownItems.forEach(item => {
         const selectedCategory = event.target.getAttribute("name");
         // log the selected category to the console 
         console.log(`You've selected the ${selectedCategory} category!`); 
-    })
+    }) 
 })
-
-
-// const form = document.querySelector("form");
-// form.addEventListener("submit", (event) => {
-//     event.preventDefault();
-
-//     console.log(event.target.searchBar.value);
-
-// })

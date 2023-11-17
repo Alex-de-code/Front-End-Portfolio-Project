@@ -20,6 +20,7 @@ wordOfTheDay.addEventListener("click", () => {
             const response = await fetch(newUrl, options);
             const result = await response.text();
             console.log(result);
+
         } catch (error) {
             console.error(error);
         }
@@ -86,11 +87,26 @@ form.addEventListener("submit", async function (event) {
             const result = await response.text();
             // log result
             console.log(result);
+            //this will convert the result string into a JSON object so we can then key into what we want
+            const data = JSON.parse(result);
+            //created a variable to select the the heading of the hero section
+            const chosenWord = document.querySelector("#word"); 
+            //now we will change the innerHTML of heading of hero section to be that of the word searched
+            chosenWord.innerHTML = data.word; 
+            // created a variable to select body/paragraph of the hero section 
+            const chosenCategory = document.querySelector("#wordCategory");
+            if (selectedCategory === "Definitions") {
+                chosenCategory.innerHTML = data.definitions
+            } else if (selectedCategory === "Synonyms") {
+                chosenCategory.innerHTML = data.synonyms
+            } else if (selectedCategory === "Antonyms") {
+                chosenCategory.innerHTML = data.antonyms 
+            }
         //if there is an error 
         } catch (error) {
             //log error
             console.error(error);
-        }
+        } 
     }
 
     // Execute the function when the form is submitted

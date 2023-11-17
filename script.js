@@ -1,17 +1,3 @@
-//this is the base URL for word searches
-const url = 'https://wordsapiv1.p.rapidapi.com/words/';
-//this creates an options object which will house our api key and main link 
-const options = {
-    method: 'GET',
-    headers: {
-        'X-RapidAPI-Key': API_KEY,
-        'X-RapidAPI-Host': 'wordsapiv1.p.rapidapi.com'
-    }
-};
-
-
-// wiring html with event listeners 
-
 // event listener for word of the day 
 const wordOfTheDay = document.querySelector(".word-of-day");
 wordOfTheDay.addEventListener("click", () => {
@@ -48,8 +34,11 @@ form.addEventListener("submit", async function (event) {
 
     // Fetch data based on the selected category
     async function fetchDataForCategory() {
+        //save the value of the searched word string to a variable 
         const searchWord = document.querySelector(".search-bar").value;
+        //created a variable to house the base url needed to access the data for the categories we want 
         const url = 'https://wordsapiv1.p.rapidapi.com/words/';
+        //this is an object given through rapid API that will be used in fetching the data
         const options = {
             method: 'GET',
             headers: {
@@ -60,6 +49,7 @@ form.addEventListener("submit", async function (event) {
 
         // Define the category endpoint based on the selected category
         let categoryEndpoint;
+        //a switch that checks which category case is received and completes url end 
         switch (selectedCategory) {
             case "Definitions":
                 categoryEndpoint = `${searchWord}/definitions`;
@@ -78,12 +68,17 @@ form.addEventListener("submit", async function (event) {
         // Construct the URL for the category
         const newUrl = url + categoryEndpoint;
 
+        // this attempts to fetch the data using the newUrl, and the data housed in options, if the data cannot be retrieved an error is given
         try {
-            // Fetch and log the result
+            // this line uses fetch f(x) to make an async HTTP request to the newUrl, we use await to wait for the completion of the fetch and the result is stored in this variable
             const response = await fetch(newUrl, options);
+            // here we use text method to extract response body as text and use await again to wait for the compltetion of this event and save it to this variable
             const result = await response.text();
+            // log result
             console.log(result);
+        //if there is an error 
         } catch (error) {
+            //log error
             console.error(error);
         }
     }

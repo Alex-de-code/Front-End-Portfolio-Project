@@ -1,3 +1,4 @@
+// --~ script for word of day ~--> 
 // event listener for word of the day 
 const wordOfTheDay = document.querySelector(".word-of-day");
 wordOfTheDay.addEventListener("click", () => {
@@ -20,6 +21,7 @@ wordOfTheDay.addEventListener("click", () => {
 });
 
 
+// --~ script for word search, based on category selected ~--> 
 // Select the form element
 const form = document.querySelector("form");
 

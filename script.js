@@ -2,6 +2,14 @@
 // event listener for word of the day 
 const wordOfTheDay = document.querySelector(".word-of-day");
 wordOfTheDay.addEventListener("click", () => {
+    const url = 'https://wordsapiv1.p.rapidapi.com/words/';
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': API_KEY,
+            'X-RapidAPI-Host': 'wordsapiv1.p.rapidapi.com'
+        }
+    };
     //logs to console in dev web tools
     console.log("You have just clicked the word of the day button!");
     //this is the end of the url needed to call a random word from API

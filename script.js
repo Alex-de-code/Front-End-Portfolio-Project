@@ -20,7 +20,15 @@ wordOfTheDay.addEventListener("click", () => {
             const response = await fetch(newUrl, options);
             const result = await response.text();
             console.log(result);
-
+            //this will convert the result string into a JSON object so we can then key into what we want
+            const data = JSON.parse(result);
+            //created a variable to select the the heading of the hero section
+            const chosenWord = document.querySelector("#word"); 
+            //now we will change the innerHTML of heading of hero section to be that of the word searched
+            chosenWord.innerHTML = `The word of the day is:`; 
+            // created a variable to select body/paragraph of the hero section 
+            const chosenCategory = document.querySelector("#wordCategory");
+            chosenCategory.innerHTML = data.word
         } catch (error) {
             console.error(error);
         }
@@ -71,6 +79,9 @@ form.addEventListener("submit", async function (event) {
             case "Antonyms":
                 categoryEndpoint = `${searchWord}/antonyms`;
                 break;
+            case "Examples":
+                categoryEndpoint = `${searchWord}/examples`;
+                break;
             default:
                 console.error("Invalid category selected");
                 return;
@@ -96,18 +107,51 @@ form.addEventListener("submit", async function (event) {
             // created a variable to select body/paragraph of the hero section 
             const chosenCategory = document.querySelector("#wordCategory");
             if (selectedCategory === "Definitions") {
-                chosenCategory.innerHTML = data.definitions
+                const listOfDefinitions = [];
+                if (data.definitions.length > 0) {
+                    for (let i = 0; i < data.definitions.length; i++) {
+                        listOfDefinitions.push(`${i + 1}. ${data.definitions[i].definition}`);
+                    }
+                    chosenCategory.innerHTML = listOfDefinitions.join('<br>');
+                } else {
+                    chosenCategory.innerHTML = "No defintions could be found for this word."
+                }
             } else if (selectedCategory === "Synonyms") {
-                chosenCategory.innerHTML = data.synonyms
+                const listOfSynonyms = [];
+                if (data.synonyms.length > 0) {
+                    for (let i = 0; i < data.synonyms.length; i++) {
+                        listOfSynonyms.push(`${i + 1}. ${data.synonyms[i]}`);
+                    }
+                    chosenCategory.innerHTML = listOfSynonyms.join('<br>');
+                } else {
+                    chosenCategory.innerHTML = "No synonyms could be found for this word." 
+                }
             } else if (selectedCategory === "Antonyms") {
-                chosenCategory.innerHTML = data.antonyms 
+                const listOfAntonyms = []; 
+                if (data.antonyms.length > 0) {
+                    for (let i = 0; i < data.antonyms.length; i++) {
+                        listOfAntonyms.push(`${i + 1}. ${data.antonyms[i]}`);
+                    }
+                    chosenCategory.innerHTML = listOfAntonyms.join('<br>'); 
+                } else {
+                    chosenCategory.innerHTML = "No antonyms could be found for this word."
+                }
+            } else if (selectedCategory === "Examples") {
+                const listOfExamples = []; 
+                if (data.examples.length > 0) {
+                    for (let i = 0; i < data.examples.length; i++) {
+                        listOfExamples.push(`${i + 1}. "${data.examples[i]}"`);
+                    }
+                    chosenCategory.innerHTML = listOfExamples.join('<br>'); 
+                } else {
+                    chosenCategory.innerHTML = "No examples could be found for this word."
+                }
             }
         //if there is an error 
         } catch (error) {
-            //log error
             console.error(error);
         } 
-    }
+    }          
 
     // Execute the function when the form is submitted
     fetchDataForCategory();

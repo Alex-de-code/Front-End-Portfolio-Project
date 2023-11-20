@@ -5,6 +5,8 @@
 ## Overview
 What's the Word? is a user-friendly web application designed to simplify the word search process. It offers a seamless user interface for searching word definitions, synonyms, antonyms, and provides example sentences. The application is powered by the Words API, making it a comprehensive tool for language enthusiasts.
 
+Link: https://alex-de-code.github.io/Front-End-Portfolio-Project/
+
 ## Features
 - **Word of the Day:** Explore a new word every day with our "Word of the Day" feature.
 - **Search Functionality:** Easily search for word definitions, synonyms, antonyms, and example sentences.
@@ -38,7 +40,7 @@ What's the Word? is a user-friendly web application designed to simplify the wor
 - Bootstrap: [Bootstrap](https://getbootstrap.com/)
 
 ## Author
-[Your Name]
+Alexander Gonzalez
 
 ## License
 This project is licensed under the [MIT License](LICENSE).  

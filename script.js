@@ -16,6 +16,7 @@ wordOfTheDay.addEventListener("click", () => {
     const newUrl = url + '?random=true' 
     //a function that returns the data, the way we get the proper part of the API is through newUrl which get us the right path for the data type or in this case category type
     async function fetchData() { 
+        //try is used to define a code block to be tested for errors while executing
         try {
             const response = await fetch(newUrl, options);
             const result = await response.text();
@@ -106,14 +107,22 @@ form.addEventListener("submit", async function (event) {
             chosenWord.innerHTML = data.word; 
             // created a variable to select body/paragraph of the hero section 
             const chosenCategory = document.querySelector("#wordCategory");
+            //if the category selected is Definitions
             if (selectedCategory === "Definitions") {
+                //create a variable to house an array of teh data we want, in this case a list of definitions 
                 const listOfDefinitions = [];
+                //if this list isn't empty 
                 if (data.definitions.length > 0) {
+                    // iterate through each element of the list 
                     for (let i = 0; i < data.definitions.length; i++) {
+                        //add the list elements/defintions to this list with ascending numbers starting at 1
                         listOfDefinitions.push(`${i + 1}. ${data.definitions[i].definition}`);
                     }
+                    //now change the innter HTML of the paragraph of the hero section to the list items
                     chosenCategory.innerHTML = listOfDefinitions.join('<br>');
+                // if the data object at the key of definitons was indeed empty
                 } else {
+                    //give this error message instead so the user knows that there are no definitions for this word at this time
                     chosenCategory.innerHTML = "No defintions could be found for this word."
                 }
             } else if (selectedCategory === "Synonyms") {
@@ -149,6 +158,7 @@ form.addEventListener("submit", async function (event) {
             }
         //if there is an error 
         } catch (error) {
+            //log that there is an error in the dev console 
             console.error(error);
         } 
     }          

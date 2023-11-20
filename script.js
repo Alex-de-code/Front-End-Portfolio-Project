@@ -27,7 +27,7 @@ wordOfTheDay.addEventListener("click", () => {
             //now we will change the innerHTML of heading of hero section to be that of the word searched
             chosenWord.innerHTML = `The word of the day is:`; 
             // created a variable to select body/paragraph of the hero section 
-            const chosenCategory = document.querySelector("#wordCategory");
+            const chosenCategory = document.querySelector("#wordCategory"); 
             chosenCategory.innerHTML = data.word
         } catch (error) {
             console.error(error);

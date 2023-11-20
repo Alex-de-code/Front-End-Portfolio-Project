@@ -1,19 +1,27 @@
 @import url('https://fonts.cdnfonts.com/css/cd-icons');
 @import url('https://fonts.cdnfonts.com/css/sf-pixelate');
+/* * {
+    border: red solid 1px;
+} */
 
 body {
     /* background-color: #e5e5f7; */
-    background-color: white;
-    opacity: 1;
-    background-image: radial-gradient(#000000 1.1500000000000001px, white 1.1500000000000001px);
+    background-color:#f0f8ff;
+    opacity: 1; 
+    background-image: radial-gradient(#000000 1.1500000000000001px, aliceblue 1.1500000000000001px);
     background-size: 23px 23px;
     font-family: 'SF Pixelate', sans-serif; 
+    font-size: x-large;
 }
 
 header {
     font-size: xx-large;
     /* background-color: white; */
     text-align: center;
+    /* background-color: #e5e5f7; */
+    /* background-image: radial-gradient(#000000 1.1500000000000001px, aliceblue 1.1500000000000001px);
+    background-size: 23px 23px;
+    font-family: 'SF Pixelate', sans-serif; */
 }
 
 h2 {
@@ -21,7 +29,7 @@ h2 {
 }
 
 h3 {
-    font-size: larger;
+    font-size: xx-large;
 }
 
 footer {
@@ -36,10 +44,48 @@ footer {
 .first-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(1, 1fr); */
+}
+
+/* .second-section {
+    display: grid;
+    grid-template-columns: 1fr;
+} */
+
+/* .top-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+} */
+
+.image-selfie {
+    width:45%;
+    margin-left: 23%;
+    margin-right: 20%;
+    border: aliceblue 1rem solid;
+    border-radius: 10%;
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+
+.first-article {
+    /* color: #e74c3c;  */
+    background-color: aliceblue;
+    border: #e74c3c solid 5px;
+    border-radius: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 3%; 
+}
+
+.main-paragraph {
+    margin-top: 0%;
 }
 
 .icons {
     font-family: 'CD-Icons', sans-serif;
+    font-size: xx-large;
+    margin-top: 0%;
+    color: #e74c3c; 
 }
 
 .no-bullets {
@@ -69,9 +115,7 @@ footer {
 
 /* fancy css for vertically rotating text section */
 .Iam {
-    /* padding: 2em 5em; */
     font: normal 40px/50px Montserrat, sans-serif;
-    /* color: #999; */
     color: black;
     /* display: grid; */
     /* grid-template-columns: repeat(2, 4fr); */
@@ -80,6 +124,7 @@ footer {
     height: 50px;
     float: left;
     margin-right: 0.5em;
+    margin-left: 40%;
     font-family: 'SF Pixelate', sans-serif; 
 
   }
@@ -90,7 +135,9 @@ footer {
     height: 50px;
     /* background-color: yellow; */
     margin-top: 40px;
+    margin-left: 23%;
     font-family: 'SF Pixelate Shaded', sans-serif;
+    text-align: center;
 
     /* top: 40px; */
   }
@@ -101,7 +148,7 @@ footer {
     white-space: nowrap;
     /* top: 0;
     left: 0; */
-  
+
   /*animation*/
   -webkit-animation:move 5s;
      -moz-animation:move 5s;

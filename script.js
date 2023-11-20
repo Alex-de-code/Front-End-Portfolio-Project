@@ -15,7 +15,7 @@ wordOfTheDay.addEventListener("click", () => {
     //this is the end of the url needed to call a random word from API
     const newUrl = url + '?random=true' 
     //a function that returns the data, the way we get the proper part of the API is through newUrl which get us the right path for the data type or in this case category type
-    async function fetchData() {
+    async function fetchData() { 
         try {
             const response = await fetch(newUrl, options);
             const result = await response.text();

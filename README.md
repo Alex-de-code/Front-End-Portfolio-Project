@@ -1,7 +1,7 @@
 # Front-End-Portfolio-Project
 # What's the Word? - Dictionary Web App
 
-![Dictionary Icon](./assets/dictionary_logo.svg)
+![Dictionary Icon](./assets/dictionary%20logo.svg)
 
 ## Overview
 What's the Word? is a user-friendly web application designed to simplify the word search process. It offers a seamless user interface for searching word definitions, synonyms, antonyms, and provides example sentences. The application is powered by the Words API, making it a comprehensive tool for language enthusiasts.

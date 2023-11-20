@@ -43,7 +43,7 @@ wordOfTheDay.addEventListener("click", () => {
 // Select the form element
 const form = document.querySelector("form");
 
-// Add an event listener to the form for the submit event
+// Add an event listener to the form for the submit event/button
 form.addEventListener("submit", async function (event) {
     // Prevent the default form submission behavior
     event.preventDefault();

@@ -38,9 +38,9 @@ footer {
     background-image:  radial-gradient(#ccc 0.8500000000000001px, transparent 0.8500000000000001px), radial-gradient(#ccc 0.8500000000000001px, #2d2d31 0.8500000000000001px);
     background-size: 34px 34px;
     background-position: 0 0,17px 17px;
-    display: inline-block;
     width: 100%;
 }
+
 
 .first-section {
     display: grid;
@@ -116,7 +116,7 @@ footer {
 
 .no-bullets {
     list-style-type: none;
-    background-color: yellow;
+    /* background-color: yellow; */
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -129,14 +129,14 @@ footer {
 
 .footer-images{
     /* position: absolute left; */
-    max-width: 5%;
-    max-height: 5%;
+    max-width: 10%;
+    margin-bottom: 5%;
 } 
 
 .logo {
     max-width: 10%;
-    margin: 5%;
-    background-color: yellow;
+    /* margin: 5%; */
+    /* background-color: yellow; */
 }
 
 /* fancy css for vertically rotating text section */

@@ -39,6 +39,7 @@ footer {
     background-size: 34px 34px;
     background-position: 0 0,17px 17px;
     display: inline-block;
+    width: 100%;
 }
 
 .first-section {
@@ -56,6 +57,21 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 } */
+
+.project-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+}
+
+.single-project {
+    /* border:black 5px solid; */
+    /* border-radius: 10px;  */
+    text-align: center;
+    margin-left: 9%;
+    margin-right: 15%;
+    /* background-color: aliceblue; */
+}
 
 .image-selfie {
     width:45%;
@@ -75,6 +91,16 @@ footer {
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 3%; 
+}
+
+.third-article {
+    background-color: aliceblue;
+    border: #e74c3c solid 5px;
+    border-radius: 10px;
+    padding-top: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 1%;  
 }
 
 .main-paragraph {

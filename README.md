@@ -1,4 +1,3 @@
-# Front-End-Portfolio-Project
 # What's the Word? - Dictionary Web App
 
 ![Dictionary Icon](./assets/dictionary%20logo.svg)
